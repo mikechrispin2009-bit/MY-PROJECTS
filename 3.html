@@ -1,0 +1,18 @@
+<script>
+    let student={
+        names:"MIKE",
+        age:16,
+        class:"swd B",
+        marks:87,
+    };
+    function result(student){
+        if(student.marks>=50){return"pass";}
+        else{return"fail";}
+    }
+    document.write("the student's names are:" +student.names +"<br>");
+    document.write("the student's age is:" +student.age +"<br>");
+    document.write("the student's class is:" +student.class +"<br>");
+    document.write("the student's marks are: " +student.marks +"<br>");
+    document.write("Result: " + result(student));
+    
+    </script>
