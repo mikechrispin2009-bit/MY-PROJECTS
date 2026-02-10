@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIKE FILMS PRESENTS</title>
+
+<style>
+/* ===== RESET & GLOBAL ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+    scroll-behavior:smooth;
+}
+
+/* ===== HEADER ===== */
+.header{
+    background:linear-gradient(to right, blueviolet, purple);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+    border-bottom:4px solid rgb(41,204,41);
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:3px solid white;
+    margin-bottom:15px;
+}
+
+.header h2 span{
+    color:red;
+}
+
+/* ===== NAV ===== */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    background:#2c3e50;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+    transform:scale(1.1);
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.main-content{
+    max-width:900px;
+    width:100%;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    border:4px solid rgb(41,204,41);
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== HOME SPECIAL STYLE ===== */
+#home .main-content{
+    text-align:center;
+}
+
+#home h2{
+    font-size:2.3em;
+    color:blueviolet;
+    margin-bottom:15px;
+}
+
+#home p{
+    font-size:1.2em;
+}
+
+/* ===== HEADINGS ===== */
+.main-content h3{
+    text-align:center;
+    color:blueviolet;
+    margin-bottom:20px;
+}
+
+/* ===== MOVIE LIST ===== */
+ul{
+    list-style:none;
+}
+
+li{
+    margin:15px 0;
+    font-size:1.1em;
+}
+
+a{
+    color:#2c3e50;
+    text-decoration:none;
+}
+
+a:hover{
+    color:blueviolet;
+    text-decoration:underline;
+}
+
+/* ===== FORM ===== */
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:2px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+button{
+    margin-top:20px;
+    background:blueviolet;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:purple;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer a{
+    color:white;
+    margin:0 10px;
+}
+
+footer a:hover{
+    color:yellow;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <img src="LOGO.png" alt="Logo">
+    <h2><span>MIKE FILMS PRESENTS</span></h2>
+</div>
+
+<!-- NAV -->
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#movies">MOVIES</a>
+    <a href="#about">ABOUT</a>
+    <a href="#feedback">FEEDBACK</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="main-content">
+        <h2>Welcome to MIKE FILMS</h2>
+        <p>
+            Bringing you high-quality films, documentaries,  
+            and visual stories that entertain and inspire.
+        </p>
+    </div>
+</section>
+
+<!-- MOVIES -->
+<section id="movies">
+    <div class="main-content">
+        <h3>Our Movie Links</h3>
+
+        <input type="text" id="searchInput"
+        placeholder="Type site name and press Enter">
+
+        <ul>
+            <li><a href="https://oshakurfilms.com/" target="_blank">Oshakur Films</a></li>
+            <li><a href="https://www.netflix.com/" target="_blank">Netflix</a></li>
+            <li><a href="https://www.primevideo.com/" target="_blank">Amazon Prime</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+            <li><a href="https://www.hulu.com/" target="_blank">Hulu</a></li>
+            <li><a href="https://www.agasobanuyetimes.com/" target="_blank">Agasobanuye Times</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="main-content">
+        <h3>About Us</h3>
+        <p>
+            MIKE FILMS PRESENTS is dedicated to professional filmmaking,
+            documentaries, promotional videos, and storytelling
+            using modern equipment and creative excellence.
+        </p>
+    </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback">
+    <div class="main-content">
+        <h3>Feedback</h3>
+        <form id="feedbackForm">
+            <label>Phone</label>
+            <input type="tel" id="phone" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Message</label>
+            <textarea id="feedbackText" disabled></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <footer>
+        <div>
+            <a href="https://www.facebook.com/mike.chrispin.2025">Facebook</a> |
+            <a href="https://www.instagram.com/mikec.hrispin">Instagram</a> |
+            <a href="https://wa.me/250784788880">WhatsApp</a>
+        </div>
+        <p>Email: mikefilms@example.com</p>
+        <p>Rubavu, Rwanda</p>
+        <p>&copy; 2026 MIKE FILMS PRESENTS</p>
+    </footer>
+</section>
+
+<script>
+/* SEARCH */
+const searchInput = document.getElementById("searchInput");
+
+const sites = {
+    netflix:"https://www.netflix.com",
+    youtube:"https://www.youtube.com",
+    prime:"https://www.primevideo.com",
+    hulu:"https://www.hulu.com",
+    oshakur:"https://oshakurfilms.com",
+    agasobanuye:"https://www.agasobanuyetimes.com"
+};
+
+searchInput.addEventListener("keydown", e=>{
+    if(e.key==="Enter"){
+        const q = searchInput.value.toLowerCase();
+        for(let key in sites){
+            if(q.includes(key)){
+                window.open(sites[key],"_blank");
+                return;
+            }
+        }
+        alert("No site found");
+    }
+});
+
+/* FEEDBACK ENABLE */
+const phone=document.getElementById("phone");
+const email=document.getElementById("email");
+const text=document.getElementById("feedbackText");
+
+function enableText(){
+    text.disabled = !(phone.value && email.value);
+}
+
+phone.addEventListener("input", enableText);
+email.addEventListener("input", enableText);
+</script>
+
+</body>
+</html>

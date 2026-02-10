@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIKE FILMS - Feedback</title>
+  <style>
+    /* --- Reset & Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- Header --- */
+    .header {
+      background: linear-gradient(to right, blueviolet, purple);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid rgb(41, 204, 41);
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+    }
+
+    .header h2 {
+      font-size: 2em;
+    }
+
+    .header span {
+      color: red;
+    }
+
+    /* --- Main Content --- */
+    .main-content {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border: 4px solid rgb(41, 204, 41);
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .main-content h2 {
+      text-align: center;
+      color: blueviolet;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      margin-top: 20px;
+      background: blueviolet;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: purple;
+      transform: scale(1.05);
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: yellow;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="LOGO.png" alt="Logo">
+    <h2><span>MIKE FILMS PRESENTS</span></h2>
+    <br>
+    <br>
+    <a href="MIKE FILMS PRESENTS.html">HOME</a>
+    <a href="home2.html">MOVIES</a>
+  </div>
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <h2>Provide Your Feedback</h2>
+
+    <form id="feedbackForm">
+      <label for="phone">Telephone Number (required):</label>
+      <input type="tel" id="phone" name="phone" placeholder="Telephone Number" required>
+
+      <label for="email">Email Address (required):</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" placeholder="Enter your feedback..." disabled></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="https://www.facebook.com/mike.chrispin.2025" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/mikec.hrispin" target="_blank">Instagram</a> |
+      <a href="https://www.youtube.com/results?search_query=oshakurfilms+com" target="_blank">YouTube</a> |
+      <a href="https://wa.me/0784788880" target="_blank">WhatsApp</a>
+    </div>
+    <div style="margin-bottom: 5px;">
+      Email: <a href="mailto:mikefilms@example.com" style="color:white;">mikefilms@example.com</a> |
+      Phone: +250 784 788 880
+    </div>
+    <div style="margin-bottom: 5px;">
+      Address: RUBAVU, RWANDA
+    </div>
+    <div style="font-size: 0.9em; margin-top: 10px;">
+      &copy; 2026 MIKE FILMS PRESENTS. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const feedbackTextarea = document.getElementById('feedback');
+    const form = document.getElementById('feedbackForm');
+
+    function checkInputs() {
+      const phoneFilled = phoneInput.value.trim() !== '';
+      const emailFilled = emailInput.value.trim() !== '';
+      feedbackTextarea.disabled = !(phoneFilled && emailFilled);
+    }
+
+    phoneInput.addEventListener('input', checkInputs);
+    emailInput.addEventListener('input', checkInputs);
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Feedback submitted! Thank you.");
+      feedbackTextarea.value = '';
+      feedbackTextarea.disabled = true;
+    });
+  </script>
+
+</body>
+</html>

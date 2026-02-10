@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SCHOOL_INFO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --main-bg: #1a7929;
+  --primary-color: #6a5acd;
+  --text-color: white;
+  --button-bg: var(--primary-color);
+  --button-text: var(--text-color);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+/* HEADER */
+header {
+  background: var(--primary-color);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color), #836fff);
+  color: var(--text-color);
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  color: var(--primary-color);
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--text-color);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 20px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.course-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px 10px 5px 0;
+}
+
+.course-btn:hover {
+  opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px;
+}
+
+/* SIDEBAR */
+#menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: var(--main-bg);
+  color: var(--text-color);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  padding: 20px;
+  overflow-y: auto;
+  transition: left 0.3s;
+  z-index: 1000;
+}
+
+#sidebar h2, #sidebar h3 {
+  margin-top: 10px;
+  color: var(--primary-color);
+}
+
+#sidebar a {
+  display: block;
+  margin: 8px 0;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#sidebar a:hover {
+  color: var(--primary-color);
+}
+
+.theme-btn {
+  margin: 5px 3px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Mubuga TSS</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Our Courses</a>
+    <a href="#contact">Contact</a>
+    <a href="#videos" target="_blank">Videos</a>
+  </nav>
+</header>
+
+<!-- MENU BUTTON -->
+<div id="menu-btn">☰ Menu</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <h2>Menu</h2>
+  <a href="#home" class="side-link">Home</a>
+  <a href="#about" class="side-link">About</a>
+  <a href="#projects" class="side-link">Our Courses</a>
+  <a href="#videos" class="side-link">Videos</a>
+  <a href="#contact" class="side-link">Contact</a>
+
+  <hr>
+
+  <h3>Theme Settings</h3>
+  <button class="theme-btn" data-color="#ff0000" style="background:#ff0000;color:#fff;">Red</button>
+  <button class="theme-btn" data-color="#0000ff" style="background:#0000ff;color:#fff;">Blue</button>
+  <button class="theme-btn" data-color="#6a5acd" style="background:#6a5acd;color:#fff;">Purple</button>
+  <button class="theme-btn" data-color="#1a7929" style="background:#1a7929;color:#fff;">Green</button>
+
+  <hr>
+
+  <h3>Language</h3>
+  <button id="lang-en" style="margin:3px;">English</button>
+  <button id="lang-rw" style="margin:3px;">Ikirundi</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1><u>Welcome to Mubuga TSS</u></h1>
+  <p>Explore our school and learn about our projects and achievements.</p>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section" id="about">
+  <h2>About Mubuga Technical Secondary School (TSS)</h2>
+  <p>
+    Mubuga Technical Secondary School (TSS) is a prestigious educational institution located in <b>Mubuga Sector, Karongi District, Rwanda</b>. 
+    Renowned for its commitment to academic excellence and technological innovation, Mubuga TSS provides students with a robust foundation in both theoretical knowledge and practical skills.
+  </p>
+  <p>
+    Our curriculum emphasizes <b>software development</b> and <b>electrical technology</b>, preparing students to excel in an increasingly digital and technology-driven world.
+  </p>
+</section>
+
+<!-- PROJECTS / COURSES -->
+<section class="section" id="projects">
+  <h2>Our Courses</h2>
+  <a href="https://www.w3schools.com/tutorials/" target="_blank" class="course-btn">Software Courses</a>
+  <a href="https://www.elearning.rtb.gov.rw" target="_blank" class="course-btn">Electrical Technology Courses</a>
+</section>
+
+<!-- VIDEOS SECTION -->
+<section class="section" id="videos">
+  <h2>Videos</h2>
+  <a href="https://youtu.be/GSMctlk-5To?si=5o4E9qkUGYPRkRnZ" target="_blank" class="course-btn">Watch Video</a>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>District: Karongi</p>
+  <p>Email: mubugatss@gmail.com</p>
+  <p>Phone: +250 780000000</p>
+  <p>Facebook: Mubuga TSS</p>
+  <p>Instagram: Mubuga TSS</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Mubuga TSS 
+  <details>Created by MIKE</details>
+</footer>
+
+<script>
+// SIDEBAR TOGGLE
+const menuBtn = document.getElementById('menu-btn');
+const sidebar = document.getElementById('sidebar');
+menuBtn.addEventListener('click', () => {
+  sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+});
+
+// THEME CHANGE
+const themeButtons = document.querySelectorAll('.theme-btn');
+themeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const color = btn.dataset.color;
+    document.documentElement.style.setProperty('--main-bg', color);
+    document.documentElement.style.setProperty('--primary-color', color);
+    document.documentElement.style.setProperty('--button-bg', color);
+    localStorage.setItem('themeColor', color);
+  });
+});
+
+// RETAIN COLOR ON RELOAD
+const savedColor = localStorage.getItem('themeColor');
+if (savedColor) {
+  document.documentElement.style.setProperty('--main-bg', savedColor);
+  document.documentElement.style.setProperty('--primary-color', savedColor);
+  document.documentElement.style.setProperty('--button-bg', savedColor);
+}
+
+// LANGUAGE SWITCH
+const langEn = document.getElementById('lang-en');
+const langRw = document.getElementById('lang-rw');
+
+langEn.addEventListener('click', () => {
+  document.getElementById('home').querySelector('h1').innerText = 'Welcome to Mubuga TSS';
+  document.getElementById('projects').querySelector('h2').innerText = 'Our Courses';
+});
+
+langRw.addEventListener('click', () => {
+  document.getElementById('home').querySelector('h1').innerText = 'Murakaza neza kuri Mubuga TSS';
+  document.getElementById('projects').querySelector('h2').innerText = 'Amasomo yacu';
+});
+</script>
+
+</body>
+</html>

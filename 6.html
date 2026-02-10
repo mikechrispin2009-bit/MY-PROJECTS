@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MIKE PHONES SHOP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#8e5151;color:rgb(50, 21, 78)}
+
+/* HEADER */
+header{
+  background:#000;color:#fff;
+  padding:15px 30px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+header h1{color:rgb(50, 21, 78)}
+nav a{
+  color:#fff;margin-left:20px;text-decoration:none;font-weight:bold;
+}
+nav a:hover{color:#ff0000}
+
+/* SECTIONS */
+section{padding:60px 30px;display:none}
+section.active{display:block}
+
+.hero{
+  height:80vh;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("1.jpg") center/cover;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;
+}
+.hero h2{font-size:55px;color:#ff0000}
+.hero span{color:rgb(50, 21, 78)}
+
+.btn{
+  display:inline-block;margin-top:20px;
+  padding:12px 30px;background:#ff0000;
+  color:#fff;text-decoration:none;border-radius:30px;font-weight:bold;
+}
+.btn:hover{background:rgb(50, 21, 78);color:#000}
+
+.title{text-align:center;color:#ff0000;margin-bottom:40px}
+
+/* FEATURES */
+.features,.products,.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  color: rgb(55, 27, 82);
+}
+
+.card,.product{
+  border:2px solid greenyellow;
+  padding:20px;border-radius:12px;text-align:center;
+}
+
+.product img,.gallery img{
+  width:100%;height:180px;object-fit:cover;
+  border:3px solid rgb(50, 21, 78);border-radius:10px;
+}
+
+/* INVOICE */
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #000;padding:6px;text-align:center}
+th{background:rgb(50, 21, 78)}
+input{width:90%;padding:4px}
+
+/* FOOTER */
+footer{
+  background:#000;color:#fff;
+  text-align:center;padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MIKE PHONES SHOP</h1>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('products')">Products</a>
+    <a href="#" onclick="showPage('invoice')">Invoice</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="hero">
+    <div>
+      <h2>MIKE <span>PHONES</span> SHOP</h2>
+      <p>Ahantu heza ho kugura drones zigezweho</p>
+      <a href="#" class="btn" onclick="showPage('products')">Reba Phone zigezweho</a>
+    </div>
+  </div>
+
+  <h2 class="title">Impamvu wahitamo twe</h2>
+  <div class="features">
+    <div class="card"><h3>Quality Nziza</h3><p>Camera 4K</p></div>
+    <div class="card"><h3>Battery Iramara</h3><p>Min 40</p></div>
+    <div class="card"><h3>GPS Smart</h3><p>Auto Return</p></div>
+  </div>
+
+  <h2 class="title">Amafoto ya phone zacu</h2>
+  <div class="gallery">
+    <img src="ip3.png" controls width="50" height="50"><br>
+    <br><br>
+    <img src="ip2.png" controls width="50" height="50"><br>
+    <img src="ip1.png" controls width="50" height="50"><br><br><br>
+    <img src="ip6.png" controls width="50" height="50"><br>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2 class="title">Phone Ziri Ku Isoko</h2>
+  <div class="products">
+    <div class="product">
+      <img src="ip4.png">
+      <h3>DJI Mini 4</h3>
+      <p>$799</p>
+      <a href="#" class="btn" onclick="showPage('invoice')">Gura</a>
+    </div>
+    <div class="product">
+      <img src="ip5.png">
+      <h3>DJI Air 3</h3>
+      <p>$1099</p>
+      <a href="#" class="btn" onclick="showPage('invoice')">Gura</a>
+    </div>
+  </div>
+</section>
+
+<!-- INVOICE -->
+<section id="invoice">
+  <h2 class="title">Invoice</h2>
+  <table><span style="color: blue;">
+    <tr><th>phones</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+    <tr>
+      <td><input></td>
+      <td><input type="number" value="1" oninput="calc()"></td>
+      <td><input type="number" value="0" oninput="calc()"></td>
+      <td id="total">0</td>
+    </tr>
+  </table></span>
+  <p><b>Grand Total:</b> $$<span id="grand">800</span></p>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact MIKE</h2>
+
+  <p><b>City:</b> rubavu</p>
+  <p><b>Email:</b> mikechrispin2009@gmail.com</p>
+  <p><b>Phone:</b> 0784788880</p>
+
+  <h3 style="margin-top:30px;color:#ff0000;">Follow Us</h3>
+
+  <div style="margin-top:15px;">
+    <a href="https://facebook.com" target="_blank" class="btn">Facebook</a>|
+    <a href="https://instagram.com/mikec.hrispin" target="_blank" class="btn">Instagram</a>|
+    <a href="https://wa.me/250795891676" target="_blank" class="btn">WhatsApp</a>
+  </div>
+</section>
+
+
+<footer>
+    &copy;
+  <p> MCM</p>
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function calc(){
+  let qty=document.querySelector("#invoice input[type=number]").value;
+  let price=document.querySelectorAll("#invoice input[type=number]")[1].value;
+  let total=qty*price;
+  document.getElementById("total").innerText=total;
+  document.getElementById("grand").innerText=total;
+}
+</script>
+
+</body>
+</html>
