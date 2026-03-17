@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drone Systems</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body background and text */
+        body {
+            background-color: #000; /* black background for contrast */
+            color: #FFD700; /* strong yellow */
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        /* Drone images */
+        .drones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .drones img {
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .drones img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        /* Paragraphs */
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #FFD700;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+
+    <h3 style="text-align: center; margin-bottom: 20px;">DRONE SYSTEMS:</h3>
+
+    <!-- Drone Images -->
+    <div class="drones">
+        <img src="drone.jpg" width="120" height="160" alt="Drone">
+        <img src="dronee.jpg" width="120" height="160" alt="Drone">
+        <img src="droneee.jpg" width="120" height="160" alt="Drone">
+    </div>
+
+    <p>Drones must appear in the world for many reasons. In our world, drones are mostly needed.</p>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>E-mail:</strong> mcjp182@gmail.com</p>
+        <p><strong>Tel:</strong> 0785790885</p>
+        <p><strong>Address:</strong> Kigali-Gasabo</p>
+        <p>We are around all over the world</p>
+    </footer>
+
+</body>
+</html>
